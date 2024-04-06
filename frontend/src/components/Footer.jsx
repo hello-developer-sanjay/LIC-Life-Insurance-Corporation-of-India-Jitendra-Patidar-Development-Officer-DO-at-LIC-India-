@@ -691,8 +691,33 @@ let endpoint = "submit-feedback";
           ))}
         </SocialIconsContainer>
       </AnimatePresence>
+      <Onlyforlap>
+  <Introduction>
+    <Next>
+      ☎ Jitendra Patidar <span className="light">Contact | Mobile Number : </span>{' '}
+      <a href="tel:+917987235207" id="contactNumber" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>+91 7987 235 207</a> 📞 | OR |
+      
+      <button onClick={copyContactNumber} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
+    </Next>
+
+    <Next>
+  🔗 <span className="light">Jitendra Patidar's Instagram ID : </span>{' '}
+  <a href="https://www.instagram.com/jay7268patidar"style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} id="instaID" target="_blank">jay7268patidar</a>
+  {' '} | OR | {' '}
+  <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Insta ID</button>
+</Next>
 
 
+    <Next>
+      <span className="light"> LIC Development Officer (DO)| Founder | Developer | Creator | Visionary | Innovator | Leader | <br /> | Entrepreneur | Technologist |</span><br />
+    </Next>
+    
+    <Text>➥ Curious to know more about Lic <a style={{ color: '#FAF7F7', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', textDecoration: "none" }} href="https://licindia.in/hi/home" target="_blank">Lic WebLink</a> to explore!</Text>
+  </Introduction>
+</Onlyforlap>
+
+
+  
 
       <ContactForm
         initial={{ opacity: 0, y: 20 }}
@@ -727,38 +752,6 @@ let endpoint = "submit-feedback";
 
 
 
-<Onlyforlap>
-        <Introduction>
-
-
-<Next>
-                ☎  <span className="light">Contact | Mobile Number : </span>{' '}
-                <span id="contactNumber">+91 7987235207 </span>
-                
-                <button onClick={copyContactNumber} style={{  marginLeft : '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
-              </Next>
-  
-  
-              <Next>🔗 
-              <span className="light">Jitendra Patidar's Instagram ID  : </span>{' '}
-                <span id="instaID">jay7268patidar </span>
-                
-                <button onClick={copyInstaID} style={{  marginLeft : '4px',color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Insta ID</button>
-              </Next>
-       
-                <Next>              <span className="light"> | Founder | Developer | Creator | Visionary | Innovator | Leader | <br/> | Entrepreneur | Technologist |</span><br/>
-
-
-                </Next>
-                <Text>➥  Curious to know more about Lic <a style={{  color: '#FAF7F7', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', textDecoration: "none" }} href="https://licindia.in/hi/home" target="_blank">Lic WebLink</a> to explore!</Text>
-
-  
-
-
-</Introduction>
-
-  </Onlyforlap>
-  
 
 
 
