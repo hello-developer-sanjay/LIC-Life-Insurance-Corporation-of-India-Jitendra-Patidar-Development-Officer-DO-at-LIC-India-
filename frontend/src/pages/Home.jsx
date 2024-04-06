@@ -66,8 +66,8 @@ text-align: justify;
 border-left: 4px solid #5d00ff;
 border-right: 4px solid #5d00ff;
 
-padding-left: 2px;
-padding-right:2px;
+padding-left: 10px;
+padding-right:10px;
 border-radius: 8px;
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 `;
@@ -761,7 +761,6 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
  />
  
 
- <meta property="og:title" content="Jitendra Patidar |Development Officer (DO) at LIC India | Life Insurance Corporation of India | भारतीय जीवन बीमा निगम" />
  <meta property="og:description" content="Jitendra Patidar, an esteemed Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry. Jitendra Patidar, our esteemed Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity.With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
 
 As India's leading life insurance provider, LIC offers a diverse range of insurance products tailored to meet the evolving needs of our customers. Whether it's securing your family's future, planning for retirement, or investing in wealth creation, LIC has you covered with innovative and reliable insurance plans.
@@ -778,9 +777,7 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
 
 " />
  <meta property="og:type" content="website" />
- <meta property="og:url" content="https://eduxcel.vercel.app/lic-jitendra-patidar" />
  <meta property="og:image:alt" content="Jitendra Patidar" />
- <meta property="og:site_name" content="Jitendra Patidar | Development Officer (DO) at LIC India | Life Insurance Corporation of India | भारतीय जीवन बीमा निगम" />
 
  <meta name="twitter:card" content="summary_large_image" />
  <meta name="twitter:title" content="Jitendra Patidar, an esteemed  Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry. Jitendra Patidar, our esteemed Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity.With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
@@ -799,7 +796,7 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
  <meta name="twitter:site" content="@sanjaypatidar" />
  <meta name="twitter:creator" content="@sanjaypatidar" />
 
- <meta name="keywords" content="Jitendra Patidar, LIC India, Associate Development Officer, ADO,DO,life insurance, insurance solutions, financial security, retirement planning, wealth creation, insurance plans, financial goals, trusted insurance provider, customer service, financial literacy, financial inclusion, CSR initiatives, community support, financial empowerment, personalized service, expert guidance, comprehensive insurance coverage, financial well-being, trusted advisor, insurance policies, claims processing, educational initiatives, environmental sustainability, financial decisions, LIC agents, financial services, India's leading insurance company" />
+ <meta name="keywords" content="Jitendra Patidar, LIC India,Development Officer, Associate Development Officer, ADO,DO,life insurance, insurance solutions, financial security, retirement planning, wealth creation, insurance plans, financial goals, trusted insurance provider, customer service, financial literacy, financial inclusion, CSR initiatives, community support, financial empowerment, personalized service, expert guidance, comprehensive insurance coverage, financial well-being, trusted advisor, insurance policies, claims processing, educational initiatives, environmental sustainability, financial decisions, LIC agents, financial services, India's leading insurance company" />
  <meta name="author" content="Sanjay Patidar" />      
     
    
@@ -988,22 +985,23 @@ strings={[
         <Introduction2>
 
 
-<Next>
-                ☎  <span className="light">Contact | Mobile Number : </span>{' '}
-                <span id="contactNumber">+91 7987235207 </span>
-                
-                <button onClick={copyContactNumber} style={{  marginLeft : '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
-              </Next>
+        <Next>
+      ☎ Jitendra Patidar <span className="light">Contact | Mobile Number : </span>{' '}
+      <a href="tel:+917987235207" id="contactNumber" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>+91 7987 235 207</a> 📞 | OR |
+      
+      <button onClick={copyContactNumber} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
+    </Next>
+
   
   
-              <Next>🔗 
-              <span className="light">Jitendra Patidar's Instagram ID  : </span>{' '}
-                <span id="instaID">jay7268patidar </span>
-                
-                <button onClick={copyInstaID} style={{  marginLeft : '4px',color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Insta ID</button>
-              </Next>
-       
-                <Next>              <span className="light"> | Founder | Developer | Creator | Visionary | Innovator | Leader | <br/> | Entrepreneur | Technologist |</span><br/>
+    <Next>
+  🔗 <span className="light">Jitendra Patidar's Instagram ID : </span>{' '}
+  <a href="https://www.instagram.com/jay7268patidar"style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} id="instaID" target="_blank">jay7268patidar</a>
+  {' '} | OR | {' '}
+  <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Insta ID</button>
+</Next>
+
+                <Next>              <span className="light">  LIC Development Officer (DO) | Founder | Developer | Creator | Visionary | Innovator | Leader | <br/> | Entrepreneur | Technologist |</span><br/>
 
 
                 </Next>
