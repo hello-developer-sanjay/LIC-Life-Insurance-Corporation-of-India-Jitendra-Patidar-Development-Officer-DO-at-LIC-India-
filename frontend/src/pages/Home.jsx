@@ -875,8 +875,8 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
                      {block.description}
 
                      </Next> 
-        <a href="#footer" onClick={() => goTo('footer')}>
-  <ContactButtonText>Contact Us</ContactButtonText>
+     <a href="#footer">
+  <ContactButtonText onClick={() => goTo('footer')}>Contact Us</ContactButtonText>
 </a>
 
 
