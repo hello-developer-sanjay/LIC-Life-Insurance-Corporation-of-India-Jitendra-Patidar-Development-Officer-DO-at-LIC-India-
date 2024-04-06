@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Slider from 'react-slick';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 import {  FaTwitter, FaInstagram } from "react-icons/fa";
 import profileImage1 from '../assets/jayprofile.png';
