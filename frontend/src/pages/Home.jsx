@@ -875,7 +875,7 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
                      {block.description}
 
                      </Next> 
-<ContactButton to="#footer" smooth={true} duration={500}>
+<ContactButton to="footer" smooth={true} duration={500}>
       <ContactButtonText>Contact Us</ContactButtonText>
     </ContactButton>  
 
