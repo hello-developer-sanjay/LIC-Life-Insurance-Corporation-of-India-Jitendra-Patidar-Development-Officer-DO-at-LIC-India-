@@ -875,10 +875,9 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
                      {block.description}
 
                      </Next> 
-   <ScrollLink to="footer" smooth={true} duration={500}>
+  <button onClick={() => goTo('footer')}>
   <ContactButtonText>Contact Us</ContactButtonText>
-</ScrollLink>
-
+</button>
 
            </motion.div>
                   );
