@@ -35,7 +35,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
  }
 `;
-const ContactButton = styled.a`
+const ContactButton = styled(Link)`
   background-color: #ffbb00;
   color: white;
   padding: 5px 10px;
