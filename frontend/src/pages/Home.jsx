@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Slider from 'react-slick';
-import { Link } from 'react-scroll'; // Import Link from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll';
 
 import {  FaTwitter, FaInstagram } from "react-icons/fa";
 import profileImage1 from '../assets/jayprofile.png';
@@ -875,9 +875,9 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
                      {block.description}
 
                      </Next> 
-     <a href="#footer">
-  <ContactButtonText onClick={() => goTo('footer')}>Contact Us</ContactButtonText>
-</a>
+   <ScrollLink to="footer" smooth={true} duration={500}>
+  <ContactButtonText>Contact Us</ContactButtonText>
+</ScrollLink>
 
 
            </motion.div>
