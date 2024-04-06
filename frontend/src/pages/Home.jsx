@@ -35,7 +35,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
  }
 `;
-const ContactButton = styled(Link)`
+const ContactButton = styled.a`
   background-color: #ffbb00;
   color: white;
   padding: 5px 10px;
@@ -52,6 +52,7 @@ const ContactButton = styled(Link)`
     box-shadow: 0px 0px 10px #ffd700; /* Shining effect */
   }
 `;
+
 
 const ContactButtonText = styled.span`
   font-weight: bold;
@@ -874,12 +875,9 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
                      {block.description}
 
                      </Next> 
-           <ContactButton as="a" href="#footer" smooth={true} duration={500}>
+         <ContactButton href="#footer">
   <ContactButtonText>Contact Us</ContactButtonText>
 </ContactButton>
-
-
-
 
            </motion.div>
                   );
