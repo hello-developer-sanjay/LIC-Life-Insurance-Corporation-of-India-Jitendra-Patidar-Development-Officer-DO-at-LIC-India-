@@ -238,34 +238,7 @@
 <body>
 
   <div id="root"></div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const sitemapUrls = [
-          'https://jitendra-patidar.vercel.app',
-          
-          
-
-
-        
-
-
-
-                  ];
   
-        const rootElement = document.getElementById('root');
-        const internalLinksContainer = document.createElement('div');
-  
-        sitemapUrls.forEach(url => {
-          const link = document.createElement('a');
-          link.href = url;
-          link.textContent = url;
-          link.style.display = 'block'; 
-          internalLinksContainer.appendChild(link);
-        });
-  
-        rootElement.appendChild(internalLinksContainer);
-      });
-    </script>
   
   
   <script type="module" src="./src/index.jsx"></script>
