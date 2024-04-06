@@ -874,9 +874,10 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
                      {block.description}
 
                      </Next> 
-             <ContactButton to="footer" smooth={true} duration={500} aria-label="Scroll to Footer">
+            <ContactButton to="#footer" smooth={true} duration={500}>
   <ContactButtonText>Contact Us</ContactButtonText>
 </ContactButton>
+
 
 
 
