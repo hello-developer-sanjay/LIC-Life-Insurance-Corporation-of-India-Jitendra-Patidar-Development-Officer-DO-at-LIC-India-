@@ -622,7 +622,10 @@ function Home() {
       title: 'Jitendra Patidar: Dynamic and Accomplished Development Officer (DO) at LIC India',
       description: 'Jitendra Patidar एलआईसी भारत में विकास अधिकारी (DO) हैं। उन्होंने अपने उत्कृष्ट कार्य और प्रतिबद्धता के माध्यम से LIC के लिए महत्वपूर्ण योगदान दिया है। जितेंद्र एक दक्ष और अनुभवी पेशेवर हैं, जो उनके विभिन्न क्षेत्रों में विस्तृत ज्ञान को प्रकट करता है। उनकी कार्यक्षमता, संवादात्मक कौशल और टीम के साथ अच्छे संबंध ने LIC को उन्हें महत्वपूर्ण धाराओं में बनाए रखा है। उनके नेतृत्व में, LIC ने अधिक से अधिक ग्राहकों को सेवा प्रदान करने के लिए नई ऊर्जा और उत्साह से काम किया है।',
     },
-  ];
+    {
+      description: 'Jitendra Patidar is a Development Officer (DO) affiliated with the Life Insurance Corporation of India (LIC). He serves the communities of Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur. With a focus on providing financial protection and security, Jitendra is dedicated to helping individuals and families in these regions.',
+    },
+  ];  
   
   const sliderSettings = {
     dots: true,
@@ -872,16 +875,17 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
                      {block.description}
 
                      </Next> 
-<a href="#footer">
-  <ContactButton to="footer" smooth={true} duration={500}>
-    <ContactButtonText>Contact Officer</ContactButtonText>
-  </ContactButton>
-</a>
+
 
 
            </motion.div>
                   );
                 })}
+                <a href="#footer">
+  <ContactButton to="footer" smooth={true} duration={500}>
+    <ContactButtonText>Contact Officer</ContactButtonText>
+  </ContactButton>
+</a>
              </div>
 
   <ProfileTextContainer>
@@ -905,7 +909,7 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
 
   <Typed
 strings={[
-  'जीवन बीमा कंपनी में काम करने का अवसर है, जल्द संपर्क करें।',
+  'जीवन बीमा कंपनी में नौकरी के अवसर हैं, तुरंत संपर्क करें।',
   'बीमा क्षेत्र में नौकरी के लिए आवेदन करें, विकास अधिकारी की टीम में शामिल हों।',
   'बीमा कंपनी के लिए अपनी योग्यता और कौशल का परीक्षण करें।',
   'विकास अधिकारी की टीम में नौकरी पाने के लिए स्नातक योग्यता आवश्यक है।',
