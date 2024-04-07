@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
+import Contact from './components/Contact';
+
 import Footer from './components/Footer';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 
@@ -26,11 +28,12 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeWithBlogSuggestion />} />
           </Routes>
+
+          <Routes>
+            <Route path="/contact-lic-officer-jitendra-patidar" element={<Contact />} />
+          </Routes>
         </div>
         <div className='relative z-0'>
-          <Footer />
-          <Link to="footer" smooth={true} duration={500}> 
-          </Link>
         </div>
       </div>
     </Router>
@@ -41,6 +44,8 @@ const HomeWithBlogSuggestion = () => {
   return (
     <>
       <Home />
+      <Footer />
+
     </>
   );
 };
