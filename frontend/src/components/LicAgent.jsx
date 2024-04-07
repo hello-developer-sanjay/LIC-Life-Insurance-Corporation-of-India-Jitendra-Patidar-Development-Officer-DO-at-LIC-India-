@@ -680,11 +680,11 @@ function LicAgent() {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     fade: true,
     pauseOnHover: true,
     arrows: false,
@@ -801,14 +801,14 @@ function LicAgent() {
     <Slider {...sliderSettings}>
     <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/jaylic.jpg"
           alt="Image 1"
           className="w-full h-auto object-cover"
         />
       </div>
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/lic.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader.jpg"
           alt="Image 2"
           className="w-full h-auto object-cover"
         />
@@ -816,10 +816,11 @@ function LicAgent() {
 
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/lic-banner-content.png"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/lic.jpg"
           alt="Image 3"
           className="w-full h-auto object-cover"
         />
+
       </div>
 
     </Slider>
