@@ -639,10 +639,10 @@ function Home() {
     {
       title: "Jitendra Patidar: Driven and Successful Development Officer (DO) at LIC Neemuch, INDIA"      ,
       description: 
-      "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, इंदौर, और जयपुर के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
+      "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, मनासा, जावद और सरवानीयाँ महाराज के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
     },
     {
-      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
+      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Manasa, Jawad and Sarwaniya Maharaj with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
     },
   ];  
   
@@ -763,7 +763,7 @@ function Home() {
   
 
   <Helmet>
-  <title>LIC Neemuch | Jitendra Patidar Development Officer (DO) From Neemuch | Mandsaur|Indore| Ratangarh|Deeken| SarwaniyaMaharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम |</title>
+  <title>LIC Neemuch | Jitendra Patidar Development Officer (DO) From Neemuch | Mandsaur|Indore| Ratangarh|Deeken| Manasa| SarwaniyaMaharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम |</title>
 
  <meta
    name="description"
