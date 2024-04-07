@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import { Link } from 'react-scroll';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LicBenefit from './LicBenefit';
 import {  FaTwitter, FaInstagram } from "react-icons/fa";
 import profileImage1 from '../assets/jitendraprofilephoto.jpg';
 import Typed from 'react-typed';
@@ -628,52 +629,32 @@ function LicAgent() {
   }, []);
  
   const contentBlock = [
-    {
-        title: 'लाखों का साथी बनें: LIC एजेंट बनने का अवसर (व्यक्तिगत)',
-        overview: 'लाभ: एलआईसी एजेंट बनने के लाभों के बारे में अधिक जानें',
 
-      },
     {
-      overview: 'लाभप्रद आजीविका',
+      title: 'सुरक्षा का साथ, सफलता की ऊंचाइयों तक',
+
+      overview: 'सुरक्षा, संवेदनशीलता, और सफलता की राह में हमारे साथ चलें। LIC एजेंट बनें और जीवन को संवारें।',
       description: 'आप लोगों के आर्थिक लक्ष्यों को पूरा कर उनके सपनों को साकार करने में मदद करेंगे। आप उनके जीवन में जो अंतर लाते हैं, वह आपकी कल्पना से कहीं अधिक फायदेमंद और संतोषजनक होगा ।',
     },
     {
-        overview: 'सफल टीम',
+        overview: 'सपनों को साकार करने का एक मात्र माध्यम - LIC',
         description: "हमारे साथ जुड़ने से आप देश के जीवन बीमा अभिकर्त्ताओं की बेहतरीन टीम का हिस्सा होंगे।वर्ष 2015 में, हमने 4021 सदस्यों का योगदान मिलियन डॉलर राउंड टेबल में किया : यह एक वैश्विक मंच है जो दुनिया के सबसे सफल बीमा अभिकर्त्ताओं को अभिवादन करता है।",
       },
-      {
-        overview: 'आकर्षक पारिश्रमिक',
-        description: "हम उद्योग में एक सर्वश्रेष्ठ पारिश्रमिक प्रणाली की पेशकश करते हैं जो न केवल आपकी वर्तमान आय का ख्याल रखती है, बल्कि भविष्य के लिए आय की भी गारंटी देती है। इसके अलावा, आप अपनी आय के लक्ष्यों को निर्धारित कर सकते हैं जिसमें आप अपनी बाकी जिंदगी के लिए जितना चाहें उतना कमा सकते हैं।",
-      },
+      
+   
+  ];
+ 
+  const contentBlocks = [
 
-      {
-        overview: 'स्वतंत्रता',
-        description: "एक अभिकर्त्ता के रूप में, आप एक सच्चे उद्यमी होंगे। आपको अपने बॉस बनने की स्वतंत्रता है: अपने लिए काम करें, अपने ग्राहक चुनें और अपना पैसा खुद बनाएं। यह सब, आपके द्वारा कोई प्रारंभिक पूंजी निवेश किए बिना होगा |",
-      },
-      {
-        overview: 'विश्व स्तरीय प्रशिक्षण',
-        description: "हम आपको सर्वश्रेष्ठ श्रेणी की प्रशिक्षण प्रणाली प्रदान करते हैं, क्योंकि यही बात एलआईसी अभिकर्त्ता को अन्य से अलग करती है। यहां तक कि अगर आपके पास बिक्री का पिछला अनुभव नहीं है, तो हमारे योग्य आंतरिक प्रशिक्षण कर्मियों द्वारा संचालित हमारा बहुआयामी प्रशिक्षण कार्यक्रम आपको जीवन बीमा बिक्री में विशेषज्ञ बनाएगा |",
-      },
-      {
-        overview: 'आजीविका अभिकर्त्ता प्रणाली के प्रति प्रतिबद्धता',
-        description: "आजीविका अभिकर्त्ता प्रणाली के प्रति हमारी प्रतिबद्धता का अर्थ है कि हम आपको और आपके प्रयासों को न केवल आज, बल्कि आपके व्यवसाय के हर स्तर पर समर्थन करते हैं।हम अपने अभिकर्त्ताओं को अपने पूरे कार्यकाल में सफलता के उच्चतम स्तर की ओर प्रयास करने के लिए प्रोत्साहित करने में विश्वास करते हैं। वास्तव में, आपके प्रदर्शन के आधार पर, हम कंपनी के साथ एक प्रबंधन करियर विकल्प भी पेश करते हैं।        ",
-      },
-      {
-        overview: 'अवसंरचना सहायता',
-        description: "हमने अपने प्रत्येक शाखा कार्यालय में एक अत्याधुनिक बुनियादी ढांचा तैयार करने में निवेश किया है। आपके पास आवश्यक उपकरण, तकनीक और लोगों का समर्थन होगा जो आपको एक लाभदायक दीर्घकालिक व्यवसाय बनाने में सक्षम करेगा |",
-      },
-      {
-        overview: 'उत्पादों और सेवाओं की पूरी रेंज ',
-        description: "आपके पास आवश्यक उपकरण, तकनीक और लोगों का समर्थन होगा जो आपको एक लाभदायक दीर्घकालिक व्यवसाय बनाने में सक्षम करेगा।",
-      },
-      {
-        overview: 'बिक्री और विपणन सहायता ',
-        description: " हम अपने अभिकर्त्ताओं को नवीन बिक्री और विपणन उपकरणों के साथ समर्थन प्रदान करते हैं ,हम जो बिक्री, प्रचार और विपणन सहयोग प्रदान करते हैं, वे आपके व्यवसाय को नई ऊंचाइयों पर ले जाने में आपकी सहायता करेंगे।",
-      },
-      {
-        overview: 'वित्तीय शक्ति',
-        description: " एलआईसी आपको और आपके ग्राहक को बेजोड़ वित्तीय शक्ति और दृढ़ता प्रदान करता है।",
-      },
+    {
+      title: 'लाखों का साथी बनें: LIC एजेंट बनने का अवसर (व्यक्तिगत)',
+
+      overview: 'सुरक्षा, संवेदनशीलता, और सफलता की राह में हमारे साथ चलें। LIC एजेंट बनें और जीवन को संवारें।',
+      description: 'आप लोगों के आर्थिक लक्ष्यों को पूरा कर उनके सपनों को साकार करने में मदद करेंगे। आप उनके जीवन में जो अंतर लाते हैं, वह आपकी कल्पना से कहीं अधिक फायदेमंद और संतोषजनक होगा ।',
+    },
+
+      
+   
   ];
 
   
@@ -801,14 +782,14 @@ function LicAgent() {
     <Slider {...sliderSettings}>
     <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/jaylic.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader1.jpg"
           alt="Image 1"
           className="w-full h-auto object-cover"
         />
       </div>
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader2.jpg"
           alt="Image 2"
           className="w-full h-auto object-cover"
         />
@@ -816,7 +797,7 @@ function LicAgent() {
 
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/lic.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader3.jpg"
           alt="Image 3"
           className="w-full h-auto object-cover"
         />
@@ -827,6 +808,61 @@ function LicAgent() {
 
     
   </div>
+
+
+
+  <div className="w-full max-w-6xl why-us-content">
+
+  {contentBlocks.map((block, index) => {
+                  const [refContent, inViewContent] = useInView({ triggerOnce: true });
+                  const controlsContent = useAnimation();
+
+                  useEffect(() => {
+                    if (inViewContent) {
+                      controlsContent.start({
+                        y: 0,
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                          duration: 2,
+                          delay: index * 0.2,
+                          type: 'spring',
+                          stiffness: 100,
+                        },
+                      });
+                    }
+                  }, [inViewContent, controlsContent, index]);
+
+                  return (
+                    <motion.div
+                      key={index}
+                      ref={refContent}
+                      className="mb-8"
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={controlsContent}
+                    >
+          <div className={`${styles.sectionHeadText} text-center mb-4`}>
+                        {block.title}
+
+
+                      </div>
+                      <Text>     
+                     {block.overview}
+
+                     </Text> 
+                      <Next>     
+                     {block.description}
+
+                     </Next> 
+
+                      
+                    </motion.div>
+                    
+                  );
+                })}
+
+             </div>
+             < LicBenefit/>
 
   <div className="w-full max-w-6xl why-us-content">
 
