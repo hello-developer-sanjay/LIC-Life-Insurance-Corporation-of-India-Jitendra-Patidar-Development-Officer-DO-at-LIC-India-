@@ -1,0 +1,58 @@
+.benefits-icons {
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .benefits-icons.animate {
+    opacity: 1;
+  }
+  
+  .benefit {
+    text-align: center;
+    margin: 20px; /* Add margins between images */
+    transition: transform 0.5s ease;
+    max-width: 100%; /* Ensure the icon does not exceed the container width */
+    max-height: 100%; /* Ensure the icon does not exceed the container height */
+  }
+  
+  .benefits-container {
+    margin: 50px 0;
+    overflow: hidden; 
+  }
+  
+  /* Define animations for individual icons */
+  .benefit:nth-child(1) {
+    animation: fadeInIcon 1s forwards;
+  }
+  
+  .benefit:nth-child(2) {
+    animation: fadeInIcon 1s forwards 0.2s;
+  }
+  
+  /* Add animations for more icons as needed */
+  
+  @keyframes fadeInIcon {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media query for smaller screen sizes */
+  @media only screen and (max-width: 600px) {
+    .benefits-icons {
+      flex-direction: column; /* Change flex direction to column */
+      align-items: center; /* Center items */
+    }
+  
+    .benefit {
+      margin: 20px 0; /* Adjust margin for smaller screens */
+    }
+  }
+  
