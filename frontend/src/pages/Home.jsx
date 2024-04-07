@@ -634,14 +634,20 @@ function Home() {
   ];
   
   const contentBlocks = [
+  
+    {
+      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Manasa, Jawad and Sarwaniya Maharaj with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
+    },
+  ];  
+  
+
+  const contentBlockz = [
     {
       title: "Jitendra Patidar: Driven and Successful Development Officer (DO) at LIC Neemuch, INDIA"      ,
       description: 
       "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, मनासा, जावद और सरवानीयाँ महाराज के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
     },
-    {
-      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Manasa, Jawad and Sarwaniya Maharaj with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
-    },
+   
   ];  
   
   const sliderSettings = {
@@ -857,7 +863,65 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
 
     
   </div>
+  <div className="w-full max-w-6xl">
 
+            {contentBlockz.map((block , index) => {
+                  const [refContent, inViewContent] = useInView({ triggerOnce: true });
+                  const controlsContents = useAnimation();
+
+              useEffect(() => {
+  if (inViewContent) {
+    controlsContents.start({
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1.5,
+        delay: index * 0.2,
+        type: 'spring',
+        stiffness: 100,
+      },
+    });
+  }
+}, [inViewContent, controlsContents, index]);
+
+                  return (
+                    <motion.div
+                      key={index}
+                      ref={refContent}
+                      className="mb-8"
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={controlsContent}
+                    >
+          <div className={`${styles.sectionHeadText} text-center mb-4`}>
+                        {block.title}
+                      </div>
+                      
+                    <Next>     
+                     {block.description}
+
+                     </Next> 
+
+
+
+           </motion.div>
+                  );
+                })}
+                <Next>
+                💰💼 Click  {' '}
+                 <ContactButton href="/be-an-lic-agent" smooth={true} duration={500}>
+    <ContactButtonText>LIC Agent बनने का अवसर</ContactButtonText>
+  </ContactButton></Next>
+  
+                  <Next>
+  ☎ Jitendra Patidar LIC (DO) Neemuch (MP) <span className="light">Contact</span> {' '}
+  <button onClick={() => window.location.href = 'tel:+917987235207'} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', boxShadow: '0px 0px 10px #ffd700' }}>Call Officer Now</button>
+</Next>
+ 
+<ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
+    <ContactButtonText>Feedback / Query</ContactButtonText>
+  </ContactButton>
+             </div>
   <div className="w-full max-w-6xl">
 
             {contentBlocks.map((block , index) => {
@@ -902,19 +966,9 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
            </motion.div>
                   );
                 })}
-                <Next>
-                 <ContactButton href="/be-an-lic-agent" smooth={true} duration={500}>
-    <ContactButtonText>LIC Agent बनने का अवसर</ContactButtonText>
-  </ContactButton></Next>
-  
-                  <Next>
-  ☎ Jitendra Patidar LIC (DO) <span className="light">Contact</span> {' '}
-  <button onClick={() => window.location.href = 'tel:+917987235207'} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', boxShadow: '0px 0px 10px #ffd700' }}>Call Officer Now</button>
-</Next>
  
-<ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
-    <ContactButtonText>Feedback / Query</ContactButtonText>
-  </ContactButton>
+ 
+
              </div>
 
   <ProfileTextContainer>
