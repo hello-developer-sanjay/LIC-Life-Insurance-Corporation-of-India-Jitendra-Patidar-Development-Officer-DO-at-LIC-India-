@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Typed from 'react-typed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUserPlus,faUniversity, faNewspaper,faBriefcase, faUserTie ,faInfoCircle} from '@fortawesome/free-solid-svg-icons';
+import { faContactCard, faUserPlus,faUniversity, faNewspaper,faBriefcase, faUserTie ,faInfoCircle} from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -350,6 +350,13 @@ const handleCareerInsightsClick = () => {
 
           </NavItem>
 
+          <NavItem>
+        <NavLinkItem to="/contact-lic-officer-jitendra-patidar" aria-label="Contact Jitendra Patidar ">
+              <FontAwesomeIcon icon={faContactCard} />
+            Contact LIC Officer           </NavLinkItem>
+        
+
+          </NavItem>
 
         
             
