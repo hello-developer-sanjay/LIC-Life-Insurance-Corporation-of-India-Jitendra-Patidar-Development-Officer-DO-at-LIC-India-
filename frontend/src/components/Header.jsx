@@ -338,17 +338,17 @@ const handleCareerInsightsClick = () => {
          
          
 
-         
-       
-          
-      
-          <NavItem>
-        <NavLinkItem to="#" aria-label="Lic Official Website" onClick={handleCareerInsightsClick}>
-              <FontAwesomeIcon icon={faNewspaper} />
-              Lic Official Website            </NavLinkItem>
+        <NavItem>
+        <NavLinkItem to="/be-an-lic-agent" aria-label="Contact Jitendra Patidar ">
+              <FontAwesomeIcon icon={faUserPlus} />
+          LIC Agent बनने का अवसर          </NavLinkItem>
         
 
           </NavItem>
+       
+          
+      
+         
 
           <NavItem>
         <NavLinkItem to="/contact-lic-officer-jitendra-patidar" aria-label="Contact Jitendra Patidar ">
@@ -358,7 +358,13 @@ const handleCareerInsightsClick = () => {
 
           </NavItem>
 
+          <NavItem>
+        <NavLinkItem to="#" aria-label="Lic Official Website" onClick={handleCareerInsightsClick}>
+              <FontAwesomeIcon icon={faNewspaper} />
+              Lic Official Website            </NavLinkItem>
         
+
+          </NavItem>
             
        
                </NavList>
