@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Slider from 'react-slick';
 import { Link } from 'react-scroll';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {  FaTwitter, FaInstagram } from "react-icons/fa";
-import profileImage1 from '../assets/jayprofile.png';
+import profileImage1 from '../assets/jitendraprofilephoto.jpg';
 import Typed from 'react-typed';
 import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion'; // Import Framer Motion
@@ -602,7 +603,24 @@ function Home() {
       setContentAnimated(true);
     }
   }, [controlsImage, controlsWhyImage,controlsContents, inViewWhyImage, controlsLearnImage, inViewLearnImage, whyImageAnimated, learnImageAnimated, inViewImage, controlsContent, inViewContent, imageAnimated, contentAnimated]);
-
+  useEffect(() => {
+    // Display an info toast message
+    toast.info("आपका स्वागत है! यदि आप अपने वित्तीय भविष्य के लिए चिंतित हैं, तो हम LIC Neemuch शाखा में आपके लिए एक अवसर लाए हैं। LIC एजेंट बनकर हमारे साथ मिलकर आपका भविष्य सुरक्षित करें। हमारे साथ जुड़ें और LIC बीमा के लाभों को अपने लाभ के लिए उठाएं। ", {
+      position: "top-center", // Set toast position
+      autoClose: 12000, 
+      hideProgressBar: false, 
+      closeOnClick: true, 
+      pauseOnHover: true, 
+      draggable: true, 
+      progress: undefined, 
+      style: {
+        background: "#487503", 
+        color: "#fff",
+        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.4)", 
+        borderRadius: "10px",
+      },
+    });
+  }, []);
  
   const contentBlock = [
     {
@@ -617,11 +635,12 @@ function Home() {
   
   const contentBlocks = [
     {
-      title: 'Jitendra Patidar: Dynamic and Accomplished Development Officer (DO) at LIC India',
-      description: 'Jitendra Patidar एलआईसी भारत में विकास अधिकारी (DO) हैं। उन्होंने अपने उत्कृष्ट कार्य और प्रतिबद्धता के माध्यम से LIC के लिए महत्वपूर्ण योगदान दिया है। जितेंद्र एक दक्ष और अनुभवी पेशेवर हैं, जो उनके विभिन्न क्षेत्रों में विस्तृत ज्ञान को प्रकट करता है। उनकी कार्यक्षमता, संवादात्मक कौशल और टीम के साथ अच्छे संबंध ने LIC को उन्हें महत्वपूर्ण धाराओं में बनाए रखा है। उनके नेतृत्व में, LIC ने अधिक से अधिक ग्राहकों को सेवा प्रदान करने के लिए नई ऊर्जा और उत्साह से काम किया है।',
+      title: "Jitendra Patidar: Driven and Successful Development Officer (DO) at LIC Neemuch, INDIA"      ,
+      description: 
+      "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, इंदौर, और जयपुर के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
     },
     {
-      description: 'Jitendra Patidar is a Development Officer (DO) affiliated with the Life Insurance Corporation of India (LIC). He serves the communities of Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur. With a focus on providing financial protection and security, Jitendra is dedicated to helping individuals and families in these regions.',
+      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
     },
   ];  
   
@@ -742,11 +761,11 @@ function Home() {
   
 
   <Helmet>
-  <title>LIC | Jitendra Patidar Development Officer (DO) From Neemuch , Mandsaur,Indore , Ratangarh|  Life Insurance Corporation of India | भारतीय जीवन बीमा निगम | Neemuch | Mandsaur | Ratangarh | Singoli | Indore | Jaipur </title>
+  <title>LIC Neemuch | Jitendra Patidar Development Officer (DO) From Neemuch | Mandsaur|Indore| Ratangarh|Deeken| SarwaniyaMaharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम |</title>
 
  <meta
    name="description"
-   content="Jitendra Patidar, an esteemed Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry.Jitendra Patidar, our esteemed  Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity. With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
+   content="LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas. Jitendra Patidar, an esteemed Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry.Jitendra Patidar, our esteemed  Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity. With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
 
 As India's leading life insurance provider, LIC offers a diverse range of insurance products tailored to meet the evolving needs of our customers. Whether it's securing your family's future, planning for retirement, or investing in wealth creation, LIC has you covered with innovative and reliable insurance plans.
 
@@ -763,7 +782,7 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
  />
  
 
- <meta property="og:description" content="Jitendra Patidar, an esteemed Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry. Jitendra Patidar, our esteemed Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity.With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
+ <meta property="og:description" content="LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.Jitendra Patidar, an esteemed Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry. Jitendra Patidar, our esteemed Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity.With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
 
 As India's leading life insurance provider, LIC offers a diverse range of insurance products tailored to meet the evolving needs of our customers. Whether it's securing your family's future, planning for retirement, or investing in wealth creation, LIC has you covered with innovative and reliable insurance plans.
 
@@ -782,7 +801,7 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
  <meta property="og:image:alt" content="Jitendra Patidar" />
 
  <meta name="twitter:card" content="summary_large_image" />
- <meta name="twitter:title" content="Jitendra Patidar, an esteemed  Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry. Jitendra Patidar, our esteemed Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity.With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
+ <meta name="twitter:title" content="LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.Jitendra Patidar, an esteemed  Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry. Jitendra Patidar, our esteemed Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity.With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
 
 As India's leading life insurance provider, LIC offers a diverse range of insurance products tailored to meet the evolving needs of our customers. Whether it's securing your family's future, planning for retirement, or investing in wealth creation, LIC has you covered with innovative and reliable insurance plans.
 
@@ -881,6 +900,11 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
            </motion.div>
                   );
                 })}
+                <Next>
+                 <ContactButton href="/be-an-lic-agent" smooth={true} duration={500}>
+    <ContactButtonText>LIC Agent बनने का अवसर</ContactButtonText>
+  </ContactButton></Next>
+  
                   <Next>
   ☎ Jitendra Patidar LIC (DO) <span className="light">Contact</span> {' '}
   <button onClick={() => window.location.href = 'tel:+917987235207'} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', boxShadow: '0px 0px 10px #ffd700' }}>Call Officer Now</button>
@@ -889,7 +913,6 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
 <ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
     <ContactButtonText>Feedback / Query</ContactButtonText>
   </ContactButton>
-
              </div>
 
   <ProfileTextContainer>
