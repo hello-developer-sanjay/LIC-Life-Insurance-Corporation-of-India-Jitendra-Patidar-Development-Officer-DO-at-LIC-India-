@@ -3,7 +3,7 @@ import  { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion, AnimatePresence,  } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUserPlus,faUniversity, faNewspaper,faBriefcase, faUserTie ,faInfoCircle} from '@fortawesome/free-solid-svg-icons';
+import { faContactCard} from '@fortawesome/free-solid-svg-icons';
 
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub, FaUsers } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
@@ -204,46 +204,19 @@ const FooterButton = styled(motion.button)`
   margin-top: 1rem;
 `;
 
-const ContactForm = styled(motion.form)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-  padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  width: 100%;
-  max-width: 500px;
 
-    border: 2px solid #ff6b6b; 
 
-`;
-
-const ContactInput = styled.input`
-  padding: 1rem;
-  border: 1px solid #555;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 1rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease;
-
-  &:hover, &:focus {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-`;
 
 const NavigationContainer = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-gap : 2rem;
+  gap: 1px;
+  padding: 2px;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
   }
 `;
@@ -253,15 +226,7 @@ const Column = styled.div`
   flex-direction: column;
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: #fff;
-  margin: 5px 0;
 
-  &:hover {
-    color: #666;
-  }
-`;
 
 const ContactTextArea = styled.textarea`
   padding: 1.5rem;
@@ -321,65 +286,6 @@ const SubmitButton = styled.button`
   }
 `;
 
-const QueryInput = styled(ContactTextArea)`
-  // Additional styling for query input
-`;
-const QueryButton = styled(SubmitButton)`
-  // Base styles from SubmitButton
-  background: linear-gradient(135deg, #2c3e50, #34495e);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 10px 25px;
-  font-size: 1.3rem;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  transition: background 0.3s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  // Additional styling specific to QueryButton
-  margin-top: 2rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-
-  // Shining gradient border effect
-  border: 2px solid transparent;
-  background-clip: padding-box;
-  background-image: linear-gradient(135deg, #e74c3c, #3498db);
-  transition: border 0.3s ease;
-
-  &:hover {
-    background: linear-gradient(135deg, #2c3e50, #2c3e50);
-    transform: translateY(-3px) scale(1.05);
-    border: 2px solid #e74c3c;
-  }
-
-  // Add a subtle pulse animation on hover
-  &:hover:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: pulse 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 0;
-    }
-  }
-`;
 const Next = styled.h1`
 font-size: 1.1rem;
 color: #f3f3f3;
@@ -486,13 +392,11 @@ const NavHeading = styled.h2`
 
 
 
-
 const Footer = () => {
   const catchyMessages = [
     "Stay Curious. Connect with Us!",
     "Exploring the Future. Get Involved!",
   ];
-  const [isToastVisible, setIsToastVisible] = useState(false);
   const copyContactNumber = () => {
     const contactNumber = document.getElementById('contactNumber');
     const range = document.createRange();
@@ -513,19 +417,7 @@ const Footer = () => {
     window.getSelection().removeAllRanges();
     alert('Instagram ID copied!');
   };
-  const handleCareerInsightsClick = () => {
-    if (!isToastVisible) {
-      toast.info("Please wait! You're now being redirected to delve into Blog insights on Sanjay Patidar's Portfolio Website...", {
-        autoClose: 3000,
-        onOpen: () => setIsToastVisible(true),
-        onClose: () => setIsToastVisible(false),
-      });
 
-      setTimeout(() => {
-        window.open("https://sanjay-patidar.vercel.app/blogs", "_blank");
-      }, 3000); 
-    }
-  };
   const getCurrentDate = () => {
     const currentDate = new Date();
     const month = currentDate.toLocaleString('default', { month: 'long' });
@@ -534,54 +426,11 @@ const Footer = () => {
     return `${month} ${day}, ${year}`;
   };
 
-const footer = useRef(null);
-useEffect(() => {
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.4,
-  };
 
-  const callback = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        toast.info(
-          "नमस्ते! अगर आपके पास कोई सुझाव या प्रश्न है व्यवस्थापक के लिए, तो कृपया उन्हें हमें अलग से भेजें। हम आपकी प्रतिक्रिया की प्रतीक्षा करेंगे। धन्यवाद!",
-          {
-            position: "top-right", 
-            autoClose: 10000, 
-            hideProgressBar: false, 
-            closeOnClick: true, 
-            pauseOnHover: true, 
-            draggable: true, 
-            progress: undefined,
-            style: {
-              background: "#487503", 
-              color: "#fff", 
-              boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.4)", 
-              borderRadius: "10px", 
-            },
-          }
-        );
-        observer.unobserve(entry.target);
-      }
-    });
-  };
 
-  const observer = new IntersectionObserver(callback, options);
+ 
 
-  const footerElement = document.getElementById("footer");
 
-  if (footerElement) {
-    observer.observe(footerElement);
-  }
-
-  return () => {
-    if (footerElement) {
-      observer.unobserve(footerElement);
-    }
-  };
-}, []); // Make sure to i
   const getRandomCatchyMessage = () =>
     catchyMessages[Math.floor(Math.random() * catchyMessages.length)];
 
@@ -589,7 +438,7 @@ useEffect(() => {
     { icon: <FaLinkedin />, label: "LinkedIn", link: "https://www.linkedin.com/in/sanjay-patidar-25b580292" },
     { icon: <FaGithub />, label: "GitHub", link: "https://github.com/hello-developer-sanjay" },
     { icon: <FaTwitter />, label: "Twitter", link: "#" },
-    { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/sanjay_patidar_mcmxcviii" },
+    { icon: <FaInstagram />, label: "Instagram", link: "https://www.instagram.com/jay7268patidar" },
   ];
 
   const handleFormSubmit = async (e) => {
@@ -693,55 +542,48 @@ let endpoint = "submit-feedback";
       </AnimatePresence>
       <Onlyforlap>
   <Introduction>
-    <Next>
-      ☎ Jitendra Patidar <span className="light">Contact | Mobile Number : </span>{' '}
-      <a href="tel:+917987235207" id="contactNumber" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>+91 7987 235 207</a> 📞 | OR |
-      
-      <button onClick={copyContactNumber} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
-    </Next>
-
-    <Next>
-  🔗 <span className="light">Jitendra Patidar's Instagram ID : </span>{' '}
-  <a href="https://www.instagram.com/jay7268patidar"style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} id="instaID" target="_blank">jay7268patidar</a>
-  {' '} | OR | {' '}
-  <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Insta ID</button>
+  <Next>
+  ☎ Jitendra Patidar <span className="light">Contact | Mobile Number : </span>{' '}
+  <a href="tel:+917987235207" id="contactNumber" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>+91 7987 235 207</a> 📞 | OR |
+  
+  <button onClick={copyContactNumber} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
 </Next>
+
+
+   <Next>
+  🔗 <span className="light">Jitendra Patidar's Instagram ID : </span>{' '}
+  <a href="https://www.instagram.com/jay7268patidar" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} id="instaIDAnchor" target="_blank" rel="noopener noreferrer">jay7268patidar</a>
+  {' '} | OR | {' '}
+  <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }} id="instaIDButton">Copy Insta ID</button>
+</Next>
+
 
 
     <Next>
       <span className="light"> LIC Development Officer (DO)| Founder | Developer | Creator | Visionary | Innovator | Leader | <br /> | Entrepreneur | Technologist |</span><br />
     </Next>
     
+   
     <Text>➥ Curious to know more about Lic <a style={{ color: '#FAF7F7', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', textDecoration: "none" }} href="https://licindia.in/hi/home" target="_blank">Lic WebLink</a> to explore!</Text>
+  <NavigationContainer>
+  <Column>
+    <NavHeading>Contact LIC Officer</NavHeading>
+    <NavLink exact to="/contact-lic-officer-jitendra-patidar">
+    <FontAwesomeIcon icon={faContactCard} />
+ Contact LIC Officer
+    </NavLink>
+    </Column>
+    </NavigationContainer>
+
+
   </Introduction>
+  
 </Onlyforlap>
 
 
   
 
-      <ContactForm
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        onSubmit={handleFormSubmit}
-      >
-        <ContactInput type="text" name="name" placeholder="Your Name" />
-        <ContactInput type="email" name="email" placeholder="Your Email" />
-        <ContactTextArea
-          name="message"
-          rows="5"
-          placeholder="Write your feedback here..."
-        />
-        <QueryInput
-          name="query"
-          rows="5"
-          placeholder="Have a question? Write your query here..."
-        />
-       <QueryButton type="submit" aria-label="Submit feedback or query form">
-        Submit
-      </QueryButton>
-      </ContactForm>
-
+    
 
 
       <ToastContainer
@@ -764,6 +606,9 @@ let endpoint = "submit-feedback";
   <span style={{ fontWeight: 'bold', color: '#ffbb00' }}>Sanjay Patidar</span><br />
   <span style={{ fontSize: '0.9rem', color: '#ccc' }}>{getCurrentDate()} | India</span>
 </Text>
+
+
+
     </FooterContainer>
   );
 };
