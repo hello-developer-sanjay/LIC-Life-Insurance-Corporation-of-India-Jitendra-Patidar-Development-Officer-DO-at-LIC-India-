@@ -38,6 +38,8 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 const ContactButton = styled.a`
   color: white;
+    box-shadow: 0px 0px 10px #fff;
+
   padding: 3px 5px;
   border: 2px solid #ffbb00; /* Creative border */
   border-radius: 30px; /* Increased border radius */
