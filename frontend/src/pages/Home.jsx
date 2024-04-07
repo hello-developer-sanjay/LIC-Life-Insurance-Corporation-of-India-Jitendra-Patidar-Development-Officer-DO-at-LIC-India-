@@ -35,8 +35,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
  }
 `;
-const ContactButton = styled(Link)`
-  background-color: #ffbb00;
+const ContactButton = styled.a`
   color: white;
   padding: 5px 10px;
   border: 2px solid #ffbb00; /* Creative border */
@@ -47,8 +46,7 @@ const ContactButton = styled(Link)`
 
   /* Shining effect on hover */
   &:hover {
-    background-color: #ffd700; /* Lighter shade for shining effect */
-    border-color: #ffd700; /* Matching border color */
+      border-color: #ffd700; /* Matching border color */
     box-shadow: 0px 0px 10px #ffd700; /* Shining effect */
   }
 `;
@@ -744,7 +742,8 @@ function Home() {
   
 
   <Helmet>
-    
+  <title>LIC | Jitendra Patidar Development Officer (DO) From Neemuch , Mandsaur,Indore , Ratangarh|  Life Insurance Corporation of India | भारतीय जीवन बीमा निगम | Neemuch | Mandsaur | Ratangarh | Singoli | Indore | Jaipur </title>
+
  <meta
    name="description"
    content="Jitendra Patidar, an esteemed Development Officer (DO) at LIC India, epitomizes the pinnacle of professionalism and expertise within the insurance industry.Jitendra Patidar, our esteemed  Development Officer (DO), operates from the headquarters located in Neemuch District, Madhya Pradesh. With a strong presence across all regions and cities of India, including Ratangarh, Neemuch, Singoli, Mandsaur, and more, Jitendra diligently serves our valued clients nationwide. As a trusted representative of LIC, Jitendra ensures that our insurance solutions reach every corner of the country, providing financial security and peace of mind to individuals and families from diverse backgrounds. With his commitment and expertise, Jitendra exemplifies LIC's mission to be a beacon of trust and reliability in the insurance industry, serving our customers with dedication and integrity. With a rich background in fostering growth and nurturing talent, Jitendra leads by example, guiding his team towards excellence in serving our valued clients. At LIC India, we are committed to providing comprehensive life insurance solutions that safeguard the financial well-being of individuals and families across the nation.
@@ -881,11 +880,10 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
            </motion.div>
                   );
                 })}
-                <a href="#footer">
-  <ContactButton to="footer" smooth={true} duration={500}>
+  <ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
     <ContactButtonText>Contact Officer</ContactButtonText>
   </ContactButton>
-</a>
+
              </div>
 
   <ProfileTextContainer>
@@ -987,22 +985,18 @@ strings={[
 
         <Onlyforlap>
         <Introduction2>
-
-
         <Next>
-      ☎ Jitendra Patidar <span className="light">Contact | Mobile Number : </span>{' '}
-      <a href="tel:+917987235207" id="contactNumber" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>+91 7987 235 207</a> 📞 | OR |
-      
-      <button onClick={copyContactNumber} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
-    </Next>
-
+  ☎ Jitendra Patidar <span className="light">Contact | Mobile Number : </span>{' '}
+  <a href="tel:+917987235207" id="contactNumber" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }}>+91 7987 235 207</a> 📞 | OR |
   
-  
-    <Next>
+  <button onClick={copyContactNumber} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Number</button>
+</Next>
+          
+<Next>
   🔗 <span className="light">Jitendra Patidar's Instagram ID : </span>{' '}
-  <a href="https://www.instagram.com/jay7268patidar"style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} id="instaID" target="_blank">jay7268patidar</a>
+  <a href="https://www.instagram.com/jay7268patidar" style={{ textDecoration: 'none', color: '#007bff', fontWeight: 'bold' }} id="instaIDAnchor" target="_blank" rel="noopener noreferrer">jay7268patidar</a>
   {' '} | OR | {' '}
-  <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }}>Copy Insta ID</button>
+  <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }} id="instaIDButton">Copy Insta ID</button>
 </Next>
 
                 <Next>              <span className="light">  LIC Development Officer (DO) | Founder | Developer | Creator | Visionary | Innovator | Leader | <br/> | Entrepreneur | Technologist |</span><br/>
