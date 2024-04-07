@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 
 import { useLocation } from 'react-router-dom';
+import LicAgent from './components/LicAgent';
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -31,6 +32,10 @@ function App() {
 
           <Routes>
             <Route path="/contact-lic-officer-jitendra-patidar" element={<Contact />} />
+          </Routes>
+          
+          <Routes>
+            <Route path="/be-an-lic-agent" element={<LicAgent />} />
           </Routes>
         </div>
         <div className='relative z-0'>
