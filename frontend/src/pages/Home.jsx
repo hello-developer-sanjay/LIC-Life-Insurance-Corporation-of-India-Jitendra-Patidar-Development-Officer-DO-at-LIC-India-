@@ -37,10 +37,10 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 const ContactButton = styled.a`
   color: white;
-  padding: 5px 10px;
+  padding: 3px 5px;
   border: 2px solid #ffbb00; /* Creative border */
   border-radius: 30px; /* Increased border radius */
-  font-size: 1.2rem; /* Slightly increased font size */
+  font-size: 1rem; /* Slightly increased font size */
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for both background and border color */
 
@@ -53,7 +53,7 @@ const ContactButton = styled.a`
 
 
 const ContactButtonText = styled.span`
-  font-weight: bold;
+  font-weight: Bold;
 `;
 const Next = styled.h1`
 font-size: 1.1rem;
@@ -870,6 +870,7 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
           <div className={`${styles.sectionHeadText} text-center mb-4`}>
                         {block.title}
                       </div>
+                      
                     <Next>     
                      {block.description}
 
@@ -880,14 +881,19 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
            </motion.div>
                   );
                 })}
-  <ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
-    <ContactButtonText>Contact Officer</ContactButtonText>
+                  <Next>
+  ☎ Jitendra Patidar LIC (DO) <span className="light">Contact</span> {' '}
+  <button onClick={() => window.location.href = 'tel:+917987235207'} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', boxShadow: '0px 0px 10px #ffd700' }}>Call Officer Now</button>
+</Next>
+ 
+<ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
+    <ContactButtonText>Feedback / Query</ContactButtonText>
   </ContactButton>
 
              </div>
 
   <ProfileTextContainer>
-    
+ 
     
   <Introduction
     initial={{ opacity: 0, y: -100,  scale: 0.5 }} 
@@ -931,7 +937,7 @@ strings={[
 
           
           </ProfileTextContainer>
-  
+   
           <HomeContainer
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
