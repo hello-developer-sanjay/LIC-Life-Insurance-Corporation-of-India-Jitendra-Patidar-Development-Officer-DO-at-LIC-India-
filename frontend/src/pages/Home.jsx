@@ -38,8 +38,7 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 const ContactButton = styled.a`
   color: white;
-    box-shadow: 0px 0px 10px #fff;
-
+  box-shadow: 0px 0px 10px #fff;
   padding: 3px 5px;
   border: 2px solid #ffbb00; /* Creative border */
   border-radius: 30px; /* Increased border radius */
@@ -47,7 +46,6 @@ const ContactButton = styled.a`
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for both background and border color */
 
-  /* Shining effect on hover */
   &:hover {
       border-color: #ffd700; /* Matching border color */
     box-shadow: 0px 0px 10px #ffd700; /* Shining effect */
@@ -639,21 +637,21 @@ function Home() {
     {
       title: "Jitendra Patidar: Driven and Successful Development Officer (DO) at LIC Neemuch, INDIA"      ,
       description: 
-      "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, मनासा, जावद और सरवानीयाँ महाराज के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
+      "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, इंदौर, और जयपुर के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
     },
     {
-      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Manasa, Jawad and Sarwaniya Maharaj with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
+      description: "LIC Neemuch is a branch of the Life Insurance Corporation of India, led by Jitendra Patidar as the Development Officer (DO). Jitendra helps people in Neemuch, Mandsaur, Ratangarh, Singoli, Indore, and Jaipur with their insurance needs. At LIC Neemuch, we focus on keeping families financially secure. With Jitendra's guidance, we provide simple and effective insurance options for everyone in these areas.",
     },
   ];  
   
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     fade: true,
     pauseOnHover: true,
     arrows: false,
@@ -683,7 +681,7 @@ function Home() {
           slidesToShow: 3,
           slidesToScroll: 1,
           dots: true,
-          arrows: false,
+          arrows: false,  
         },
       },
     ],
@@ -763,7 +761,7 @@ function Home() {
   
 
   <Helmet>
-  <title>LIC Neemuch | Jitendra Patidar Development Officer (DO) From Neemuch | Mandsaur|Indore| Ratangarh|Deeken| Manasa| SarwaniyaMaharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम |</title>
+  <title>LIC Neemuch | Jitendra Patidar Development Officer (DO) From Neemuch | Mandsaur| Ratangarh|Deeken|Manasa|Jawad|SarwaniyaMaharaj MadyaPradesh|Life Insurance Corporation of India | भारतीय जीवन बीमा निगम |</title>
 
  <meta
    name="description"
@@ -829,17 +827,18 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
      <div className={`relative top-[10px] max-w-8xl mx-auto ${styles.paddingX} flex flex-col items-center`}>
   <div className="w-full max-w-4xl">
     
-    <Slider {...sliderSettings}>
+  <Slider {...sliderSettings}>
     <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader1.jpg"
           alt="Image 1"
           className="w-full h-auto object-cover"
         />
+        
       </div>
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/lic.jpg"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader2.jpg"
           alt="Image 2"
           className="w-full h-auto object-cover"
         />
@@ -847,10 +846,11 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
 
       <div className="w-full">
         <img
-          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/lic-banner-content.png"
+          src="https://sanjaybasket.s3.ap-south-1.amazonaws.com/lic-jay/licheader3.jpg"
           alt="Image 3"
           className="w-full h-auto object-cover"
         />
+
       </div>
 
     </Slider>
