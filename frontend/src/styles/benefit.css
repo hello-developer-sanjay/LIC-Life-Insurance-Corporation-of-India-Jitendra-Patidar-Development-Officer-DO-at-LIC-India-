@@ -43,6 +43,27 @@
       transform: translateY(0);
     }
   }
+.call-text {
+  position: relative;
+  display: inline-block;
+}
+
+.call-text::before {
+  content: '📞 👇';
+  position: absolute;
+  top: -30px; /* Adjust the positioning as needed */
+  left: 10px; /* Adjust the positioning as needed */
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px); /* Adjust the bounce height as needed */
+  }
+}
   
   /* Media query for smaller screen sizes */
   @media only screen and (max-width: 600px) {
