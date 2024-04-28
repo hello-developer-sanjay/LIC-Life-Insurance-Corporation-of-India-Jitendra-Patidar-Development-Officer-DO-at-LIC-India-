@@ -2,6 +2,7 @@ import  { useEffect, useRef } from 'react';
 import profileImage1 from '../assets/jitendraprofilephoto.jpg';
 import Rating from '../components/Rating';
 import Review from '../components/Review';
+import benefit from '../styles/benefit.css';
 
 import styled, { keyframes } from 'styled-components';
 import { motion, AnimatePresence,  } from "framer-motion";
