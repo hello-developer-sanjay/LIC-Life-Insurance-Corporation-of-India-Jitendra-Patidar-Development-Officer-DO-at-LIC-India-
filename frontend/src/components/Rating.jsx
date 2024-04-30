@@ -13,7 +13,7 @@ const StarRating = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://eduxcel-api-14april.onrender.com/ratings');
+        const response = await axios.get('https://eduxcel-api-30april.onrender.com/ratings');
         const { data } = response;
         setUsersCount(data.length);
         setAverageRating(
@@ -39,12 +39,12 @@ const StarRating = () => {
         localStorage.setItem('currentUser', randomUserId);
       }
   
-      await axios.post('https://eduxcel-api-13april.onrender.com/ratings', {
+      await axios.post('https://eduxcel-api-30april.onrender.com/ratings', {
         userId: localStorage.getItem('currentUser'),
         rating: newRating,
       });
   
-      const response = await axios.get('https://eduxcel-api-14april.onrender.com/ratings');
+      const response = await axios.get('https://eduxcel-api-30april.onrender.com/ratings');
       const { data } = response;
       setUsersCount(data.length);
       setAverageRating(
