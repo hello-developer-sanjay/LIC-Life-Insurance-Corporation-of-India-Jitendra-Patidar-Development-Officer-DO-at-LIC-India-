@@ -573,19 +573,6 @@ const Home = () => {
     window.getSelection().removeAllRanges();
     alert('Instagram ID copied!');
   };
-  const handleCareerInsightsClick = () => {
-    if (!isToastVisible) {
-      toast.info("Please wait! You're now being redirected to delve into Blog insights on Sanjay Patidar's Portfolio Website...", {
-        autoClose: 3000,
-        onOpen: () => setIsToastVisible(true),
-        onClose: () => setIsToastVisible(false),
-      });
-
-      setTimeout(() => {
-        window.open("https://sanjay-patidar.vercel.app/blogs", "_blank");
-      }, 3000); 
-    }
-  };
   const getCurrentDate = () => {
     const currentDate = new Date();
     const month = currentDate.toLocaleString('default', { month: 'long' });
@@ -675,7 +662,7 @@ useEffect(() => {
         successMessage = "प्रश्न भेजा गया! हमारे उत्तर की प्रतीक्षा करें, जो केवल आपके लिए तैयार किया गया है।";
       }
   
-      const response = await fetch(`https://eduxcel-api-14april.onrender.com/api/${endpoint}`, {
+      const response = await fetch(`https://eduxcel-api-30april.onrender.com/api/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
