@@ -1,0 +1,211 @@
+/* Insurance Calculator Container */
+.insurance-calculator-container {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Heading Styles */
+.calculator-heading {
+    margin-bottom: 30px;
+}
+
+.calculator-heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #003087;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculator-heading p {
+    font-size: 18px;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Cards Container */
+.calculator-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Card Styles */
+.calculator-card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+    border: 2px solid #003087;
+}
+
+.calculator-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Content */
+.card-content {
+    flex: 1;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-link {
+    font-size: 16px;
+    color: #003087;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card-link .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.calculator-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Card Icon */
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff3e6;
+    margin-left: 15px;
+}
+
+.coverage-icon svg, .premium-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .calculator-cards {
+        gap: 15px;
+    }
+
+    .calculator-card {
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    .calculator-heading h2 {
+        font-size: 28px;
+    }
+
+    .calculator-heading p {
+        font-size: 16px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .card-link {
+        font-size: 14px;
+    }
+
+    .card-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .coverage-icon svg, .premium-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calculator-card {
+        max-width: 400px;
+        width: 90%;
+    }
+
+    .calculator-heading h2 {
+        font-size: 24px;
+    }
+
+    .calculator-heading p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .insurance-calculator-container {
+        padding: 20px 10px;
+    }
+
+    .calculator-card {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-content {
+        text-align: center;
+    }
+
+    .card-icon {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .coverage-icon svg, .premium-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+    }
+
+    .card-link {
+        font-size: 13px;
+    }
+}
