@@ -8,7 +8,7 @@ import {  FaTwitter, FaInstagram } from "react-icons/fa";
 import profileImage1 from '../assets/jitendraprofilephoto.jpg';
 import Typed from 'react-typed';
 import styled from 'styled-components';
-import { motion, useAnimation } from 'framer-motion'; // Import Framer Motion
+import { motion, useAnimation } from 'framer-motion'; 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { styles } from '../styles';
@@ -17,7 +17,7 @@ import StarsCanvas from '../components/Stars';
 import LearnImage from '../assets/lic-term-insurance.png';
 import WhyUsImage from '../assets/utsav.png';
 
-import { useInView } from 'react-intersection-observer'; // Import react-intersection-observer
+import { useInView } from 'react-intersection-observer'; 
 import LicHeader from '../components/LicHeader';
 import LicChatBot from '../components/LicChatBot';
 const H2 = styled.h1`
@@ -45,7 +45,7 @@ const ContactButton = styled.a`
   border-radius: 30px; /* Increased border radius */
   font-size: 1rem; /* Slightly increased font size */
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for both background and border color */
+  transition: background-color 0.3s ease, border-color 0.3s ease; 
 
   &:hover {
       border-color: #ffd700; /* Matching border color */
