@@ -82,7 +82,7 @@ const LicBenefit = () => {
                 if (input) setShowConfirmPopup(true);
             };
         }
-    }, []);
+    }, [input]);
 
     // Auto-scroll to latest message
     useEffect(() => {
@@ -161,10 +161,18 @@ const LicBenefit = () => {
             if (!response.ok) throw new Error('API request failed');
             const data = await response.json();
             const aiResponse = data.candidates[0].content.parts[0].text;
-            setMessages(prev => [...prev, { sender: 'ai', text: aiResponse, id: Date.now(), timestamp: new Date().toLocaleTimeString() }]);
+            const customMessage = "**अधिक जानकारी के लिए LIC अधिकारी से संपर्क करें: जितेंद्र पाटीदार, फोन: 798723527**";
+            setMessages(prev => [
+                ...prev,
+                { sender: 'ai', text: aiResponse, id: Date.now(), timestamp: new Date().toLocaleTimeString() },
+                { sender: 'ai', text: customMessage, id: Date.now() + 1, timestamp: new Date().toLocaleTimeString() },
+            ]);
         } catch (error) {
             console.error('Error fetching Gemini API:', error);
-            setMessages(prev => [...prev, { sender: 'ai', text: 'कुछ गलत हुआ। कृपया फिर से कोशिश करें!', id: Date.now(), timestamp: new Date().toLocaleTimeString() }]);
+            setMessages(prev => [
+                ...prev,
+                { sender: 'ai', text: 'कुछ गलत हुआ। कृपया फिर से कोशिश करें!', id: Date.now(), timestamp: new Date().toLocaleTimeString() },
+            ]);
         } finally {
             setIsLoading(false);
         }
