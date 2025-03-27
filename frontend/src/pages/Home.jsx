@@ -19,6 +19,7 @@ import WhyUsImage from '../assets/utsav.png';
 
 import { useInView } from 'react-intersection-observer'; // Import react-intersection-observer
 import LicHeader from '../components/LicHeader';
+import LicChatBot from '../components/LicChatBot';
 const H2 = styled.h1`
 color: #0DCB9A;
 
@@ -246,10 +247,10 @@ const BackgroundOverlay = styled.div`
 
 
 const ProfileImage = styled(motion.img)`
-  width: 250px;
-  height: 250px;
+  width: 210px;
+  height: 210px;
   margin-top: 2rem;
-  margin-left: 10rem;
+  margin-left: 15rem;
 
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6);
@@ -314,7 +315,7 @@ const ProfileImage = styled(motion.img)`
     width: 180px;
     height: 180px;
   margin-top : 2rem;
-    margin-left: 3rem;
+    margin-left: 0.5rem;
 
 }
 
@@ -643,7 +644,7 @@ function Home() {
 
   const contentBlockz = [
     {
-      title: "Jitendra Patidar: Driven and Successful Development Officer (DO) at LIC Neemuch, INDIA"      ,
+      title: "Jitendra Patidar: Development Officer (DO) at LIC Neemuch, INDIA"      ,
       description: 
       "एलआईसी नीमच भारतीय जीवन बीमा निगम की एक शाखा है, जिसका प्रबंधन विकास अधिकारी (डीओ) के रूप में जितेंद्र पाटीदार द्वारा किया जाता है। यह शाखा नीमच, मंदसौर, रतनगढ़, सिंगोली, मनासा, जावद और सरवानीयाँ महाराज के लोगों की सेवा करती है। एलआईसी नीमच में, हम परिवारों की आर्थिक सुरक्षा पर जोर देते हैं। जितेंद्र के मार्गदर्शन में, हम इन क्षेत्रों में सरल और प्रभावी बीमा विकल्प प्रदान करते हैं, ताकि सभी लोग अपनी आर्थिक सुरक्षा को सुनिश्चित कर सकें।",
     },
@@ -863,65 +864,96 @@ Join hands with Jitendra Patidar and the LIC India team today to experience the 
 
     
   </div>
-  <div className="w-full max-w-6xl">
+  <div
+  style={{
+    width: "100%",
+    maxWidth: "1280px",
+  }}
+>
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .mobile-text {
+          font-size: 1rem !important;
+        }
+      }
+    `}
+  </style>
 
-            {contentBlockz.map((block , index) => {
-                  const [refContent, inViewContent] = useInView({ triggerOnce: true });
-                  const controlsContents = useAnimation();
+  {contentBlockz.map((block, index) => {
+    const [refContent, inViewContent] = useInView({ triggerOnce: true });
+    const controlsContents = useAnimation();
 
-              useEffect(() => {
-  if (inViewContent) {
-    controlsContents.start({
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1.5,
-        delay: index * 0.2,
-        type: 'spring',
-        stiffness: 100,
-      },
-    });
-  }
-}, [inViewContent, controlsContents, index]);
+    useEffect(() => {
+      if (inViewContent) {
+        controlsContents.start({
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          transition: {
+            duration: 1.5,
+            delay: index * 0.2,
+            type: "spring",
+            stiffness: 100,
+          },
+        });
+      }
+    }, [inViewContent, controlsContents, index]);
 
-                  return (
-                    <motion.div
-                      key={index}
-                      ref={refContent}
-                      className="mb-8"
-                      initial={{ y: 20, opacity: 0 }}
-                      animate={controlsContent}
-                    >
-          <div className={`${styles.sectionHeadText} text-center mb-4`}>
-                        {block.title}
-                      </div>
-                      
-                    <Next>     
-                     {block.description}
+    return (
+      <motion.div
+        key={index}
+        ref={refContent}
+        className="mb-8"
+        initial={{ y: 20, opacity: 0 }}
+        animate={controlsContents}
+      >
+        <div
+          className={`${styles.sectionHeadText} text-center mb-4 mobile-text`}
+        >
+          {block.title}
+        </div>
 
-                     </Next> 
+        <Next>
+          <span className="mobile-text">{block.description}</span>
+        </Next>
+      </motion.div>
+    );
+  })}
 
+  <Next>
+    💰💼 Click{" "}
+    <ContactButton href="/be-an-lic-agent" smooth={true} duration={500}>
+      <ContactButtonText className="mobile-text">
+        LIC Agent बनने का अवसर
+      </ContactButtonText>
+    </ContactButton>
+  </Next>
 
+  <Next>
+    ☎ Jitendra Patidar LIC (DO) Neemuch (MP){" "}
+    <span className="light mobile-text">Contact</span>{" "}
+    <button
+      onClick={() => (window.location.href = "tel:+917987235207")}
+      style={{
+        marginLeft: "4px",
+        color: "#fff",
+        padding: "2px 4px",
+        border: "2px solid #ff6b6b",
+        borderRadius: "30px",
+        cursor: "pointer",
+        boxShadow: "0px 0px 10px #ffd700",
+      }}
+    >
+      Call Officer Now
+    </button>
+  </Next>
 
-           </motion.div>
-                  );
-                })}
-                <Next>
-                💰💼 Click  {' '}
-                 <ContactButton href="/be-an-lic-agent" smooth={true} duration={500}>
-    <ContactButtonText>LIC Agent बनने का अवसर</ContactButtonText>
-  </ContactButton></Next>
-  
-                  <Next>
-  ☎ Jitendra Patidar LIC (DO) Neemuch (MP) <span className="light">Contact</span> {' '}
-  <button onClick={() => window.location.href = 'tel:+917987235207'} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', boxShadow: '0px 0px 10px #ffd700' }}>Call Officer Now</button>
-</Next>
- 
-<ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
-    <ContactButtonText>Feedback / Query</ContactButtonText>
+  <ContactButton href="/contact-lic-officer-jitendra-patidar" smooth={true} duration={500}>
+    <ContactButtonText className="mobile-text">Feedback / Query</ContactButtonText>
   </ContactButton>
-             </div>
+</div>;
+
   <div className="w-full max-w-6xl">
 
             {contentBlocks.map((block , index) => {
@@ -1084,11 +1116,10 @@ strings={[
   <button onClick={copyInstaID} style={{ marginLeft: '4px', color: '#fff', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer' }} id="instaIDButton">Copy Insta ID</button>
 </Next>
 
-                <Next>              <span className="light">  LIC Development Officer (DO) | Founder | Developer | Creator | Visionary | Innovator | Leader | <br/> | Entrepreneur | Technologist |</span><br/>
+                <Next>              <span className="light">  LIC Development Officer (DO) | LIC Neemuch | भारतीय जीवन बीमा निगम (LIC) | Leader </span><br/>
 
 
                 </Next>
-                <Text>➥  Curious to know more about Lic <a style={{  color: '#FAF7F7', padding: '2px 4px', border: '2px solid #ff6b6b', borderRadius: '30px', cursor: 'pointer', textDecoration: "none" }} href="https://licindia.in/hi/home" target="_blank">Lic WebLink</a> to explore!</Text>
 
   
 
@@ -1117,18 +1148,17 @@ strings={[
         Hi there! I'm{' '}
     
         <F2> Jitendra Patidar</F2>  
-        <span className="highlight">Development Officer (DO) at LIC India</span><br/> 
+        <span className="highlight">Development Officer</span><br/> 
 
 
 
 <Text>
 🙋‍♀️    Jitendra Patidar एलआईसी भारत में विकास अधिकारी (DO) हैं। <br/>
-🙋‍♀️ उन्होंने अपने उत्कृष्ट कार्य और प्रतिबद्धता के माध्यम से LIC के लिए महत्वपूर्ण योगदान दिया है।
 <br/>
 </Text>
 
 
-<Text>➥  जितेंद्र एक दक्ष और अनुभवी पेशेवर हैं, जो उनके विभिन्न क्षेत्रों में विस्तृत ज्ञान को प्रकट करता है। उनकी कार्यक्षमता, संवादात्मक कौशल और टीम के साथ अच्छे संबंध ने LIC को उन्हें महत्वपूर्ण धाराओं में बनाए रखा है। </Text><br/>
+<Text>➥  जितेंद्र एक दक्ष और अनुभवी पेशेवर हैं। उनकी कार्यक्षमता, संवादात्मक कौशल और टीम के साथ अच्छे संबंध ने LIC को उन्हें महत्वपूर्ण धाराओं में बनाए रखा है। </Text><br/>
 
 
 
@@ -1138,6 +1168,8 @@ strings={[
       </FlexContainer>
   
     </HomeContainer>
+    <LicChatBot/>
+
           <div className={`${styles.sectionHeadText} text-center mb-4`}>
           आपके लिए तैयार एलआईसी योजनाएं खरीदें!
 </div>
@@ -1150,8 +1182,9 @@ strings={[
 
 
       <div className={`relative top-[20px] max-w-8xl mx-auto mb-0 ${styles.paddingX} flex flex-col items-center`}>
-       
-        <LicHeader/>
+      <LicHeader/>
+
+
         <div className="why-us-section py-16 flex flex-col lg:flex-row items-center">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center mb-12">
